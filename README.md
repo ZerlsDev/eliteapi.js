@@ -26,3 +26,45 @@ elite.getUserStats('some user id').then((result => console.log(resullt));
 * getMatchByUserId(userId) - Get a games statistics by one of the players (either player 1 or 2) 
 * getTeamByTeamId(teamId) - Return information about a team by it's Id
 * getTeamByUserId(userId) - Return information about a team by either the captain or member's Id
+
+# getUserStats(userId)
+Return the users Elite Creative statistics
+```js
+elite.getUserStats('some user id').then((result => console.log(resullt));
+```
+
+# getUserQueue(userId)
+Returns information about the users queue (if they're queuing)
+```js
+elite.getUserQueue('some user id').then((result => console.log(resullt));
+```
+
+# inGame(userId)
+Whether or not the user is in an on going match
+```js
+elite.inGame('some user id').then((result => console.log(resullt));
+```
+
+# getMatchByGameId(gameId)
+Get a games statistics by it's game Id
+```js
+elite.inGame('3516').then((result => console.log(resullt));
+```
+
+# getMatchByUserId(userId)
+Get a games statistics by one of the players (either player 1 or 2) 
+```js
+elite.inGame('some user id').then((result => console.log(resullt));
+```
+
+# getTeamByTeamId(teamId)
+Return information about a team by it's Id
+```js
+elite.inGame('GzE2jA').then((result => console.log(resullt));
+```
+
+# getTeamByUserId(userId)
+Return information about a team by either the captain or member's Id
+```js
+elite.getTeamByUserId('some user id').then((result => console.log(resullt));
+```
