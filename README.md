@@ -11,7 +11,7 @@ npm install eliteapi.js
 
 # Example Usage
 ```js
-const EliteCreative = require('../index');
+const EliteCreative = require('eliteapi.js');
 const elite = new EliteCreative('d6c5141c53403f4ad6ef93c2db89591676b13c4a'); // Generate your API key at https://elitescrims.xyz/developer
 
 elite.getUserStats('some user id').then((result => console.log(resullt));
