@@ -4,9 +4,11 @@ eliteapi.js is a node.js API wrapper for Elite Creative allowing you to easily i
 
 # Installation
 To install **eliteapi.js**, run the following command into your terminal from your bot folder:
-~~~~
-npm install eliteapi.js
-~~~~
+> Install eliteapi.js:
+>
+>```
+>npm install eliteapi.js
+>```
 
 # Example Usage
 ```js
