@@ -1,4 +1,5 @@
-const { getUserStats, getUserQueue, inGame, getMatchByGameId, getMatchByUserId, getTeamByTeamId, getTeamByUserId } = require('./functions');
+const { get } = require('./functions');
+const config = require('./config');
 
 /**
  * @property {String} token Elite API Token
@@ -9,7 +10,7 @@ class EliteAPI {
      * @param {String} token Elite Api Token
      */
     constructor(token) {
-        if (!token) throw new TypeError('Elite API Token is missing.');
+        if (!token) throw new TypeError('Elite API Token is missing. Generate your API key at https://elitescrims.xyz/developer');
         this._token = token;
     }
 
@@ -27,7 +28,7 @@ class EliteAPI {
      */
     async getUserStats(id = this.id) {
         if (!id) throw new TypeError('Missing User ID');
-        return getUserStats(id, this._token);
+        return get(id, this._token, config.endpoints.get_user_stats);
     }
 
     /**
@@ -36,7 +37,7 @@ class EliteAPI {
      */
     async getUserQueue(id = this.id) {
         if (!id) throw new TypeError('Missing User ID');
-        return getUserQueue(id, this._token);
+        return get(id, this._token, config.endpoints.get_user_queue);
     }
 
     /**
@@ -45,7 +46,7 @@ class EliteAPI {
      */
     async inGame(id = this.id) {
         if (!id) throw new TypeError('Missing User ID');
-        return inGame(id, auth);
+        return get(id, this._token, config.endpoints.in_game);
     }
 
     /**
@@ -54,7 +55,7 @@ class EliteAPI {
      */
     async getMatchByGameId(id = this.id) {
         if (!id) throw new TypeError('Missing Game ID');
-        return getMatchByGameId(id, this._token);
+        return get(id, this._token, config.endpoints.get_match_by_game_id);
     }
 
     /**
@@ -63,7 +64,7 @@ class EliteAPI {
      */
     async getMatchByUserId(id = this.id) {
         if (!id) throw new TypeError('Missing User ID');
-        return getMatchByUserId(id, this._token);
+        return get(id, this._token, config.endpoints.get_match_by_user_id);
     }
 
     /**
@@ -72,7 +73,7 @@ class EliteAPI {
      */
     async getTeamByTeamId(id = this.id) {
         if (!id) throw new TypeError('Missing Game ID');
-        return getTeamByTeamId(id, this._token);
+        return get(id, this._token, config.endpoints.get_team_by_team_id);
     }
 
     /**
@@ -81,7 +82,7 @@ class EliteAPI {
      */
     async getTeamByUserId (id = this.id) {
         if (!id) throw new TypeError('Missing User ID');
-        return getTeamByUserId (id, this._token);
+        return get (id, this._token, config.endpoints.get_team_by_user_id);
     }
 }
 
