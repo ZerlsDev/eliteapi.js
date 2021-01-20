@@ -51,7 +51,7 @@ elite.inGame('some user id').then((result => console.log(resullt)));
 ## getMatchByGameId(gameId)
 Get a games statistics by it's game Id
 ```js
-elite.getMatchByGameId('3516').then((result => console.log(resullt)));
+elite.getMatchByGameId('some game id').then((result => console.log(resullt)));
 ```
 
 ## getMatchByUserId(userId)
@@ -63,7 +63,7 @@ elite.getMatchByUserId('some user id').then((result => console.log(resullt)));
 ## getTeamByTeamId(teamId)
 Return information about a team by it's Id
 ```js
-elite.getTeamByTeamId('GzE2jA').then((result => console.log(resullt)));
+elite.getTeamByTeamId('some team id').then((result => console.log(resullt)));
 ```
 
 ## getTeamByUserId(userId)
