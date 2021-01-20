@@ -27,7 +27,6 @@ elite.getUserStats('some user id').then((result => console.log(resullt));
 * [getTeamByTeamId(teamId)](https://github.com/ZerlsDev/eliteapi.js/#getteambyteamidteamid) - Return information about a team by it's Id
 * [getTeamByUserId(userId)](https://github.com/ZerlsDev/eliteapi.js/#getteambyuseriduserid) - Return information about a team by either the captain or member's Id
 
-# Examples
 ## getUserStats(userId)
 Return the users Elite Creative statistics
 ```js
