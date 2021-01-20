@@ -7,4 +7,5 @@ To install **eliteapi.js**, run the following command into your terminal from yo
 > Install eliteapi.js
 ```
 npm install eliteapi.js
-> ```
+```
+>
