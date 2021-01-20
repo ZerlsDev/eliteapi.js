@@ -1,0 +1,25 @@
+{
+  "name": "eliteapi.js",
+  "version": "1.0.0",
+  "description": "Node.js API Wrapper for Elite Creative",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZerlsDev/eliteapi.js.git"
+  },
+  "keywords": [
+    "eliteapi.js"
+  ],
+  "author": "Zerls#2020",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZerlsDev/eliteapi.js/issues"
+  },
+  "homepage": "https://github.com/ZerlsDev/eliteapi.js#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
