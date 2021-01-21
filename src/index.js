@@ -14,20 +14,12 @@ class EliteAPI {
         this._token = token;
     }
 
-    get version() {
-        return require('../package.json').version;
-    }
-
-    get token() {
-        return this._token;
-    }
-
     /**
      * Get User Stats
      * @param {String} id The users id who you're getting stats from
      */
     async getUserStats(id = this.id) {
-        if (!id) throw new TypeError('Missing User ID');
+        if (!id) throw new TypeError('User ID is missing');
         return get(id, this._token, config.endpoints.get_user_stats);
     }
 
@@ -36,7 +28,7 @@ class EliteAPI {
      * @param {String} id The id of the users whos queue you're getting
      */
     async getUserQueue(id = this.id) {
-        if (!id) throw new TypeError('Missing User ID');
+        if (!id) throw new TypeError('User ID is missing');
         return get(id, this._token, config.endpoints.get_user_queue);
     }
 
@@ -45,7 +37,7 @@ class EliteAPI {
      * @param {String} id The if og the user who you're checking if they're in a game
      */
     async inGame(id = this.id) {
-        if (!id) throw new TypeError('Missing User ID');
+        if (!id) throw new TypeError('User ID is missing');
         return get(id, this._token, config.endpoints.in_game);
     }
 
@@ -54,7 +46,7 @@ class EliteAPI {
      * @param {String} id The game id of the matching you're searching
      */
     async getMatchByGameId(id = this.id) {
-        if (!id) throw new TypeError('Missing Game ID');
+        if (!id) throw new TypeError('Game ID is missing');
         return get(id, this._token, config.endpoints.get_match_by_game_id);
     }
 
@@ -63,7 +55,7 @@ class EliteAPI {
      * @param {String} id Find game information by the player user id
      */
     async getMatchByUserId(id = this.id) {
-        if (!id) throw new TypeError('Missing User ID');
+        if (!id) throw new TypeError('User ID is missing');
         return get(id, this._token, config.endpoints.get_match_by_user_id);
     }
 
@@ -72,7 +64,7 @@ class EliteAPI {
      * @param {String} id The team id of the team you're searching
      */
     async getTeamByTeamId(id = this.id) {
-        if (!id) throw new TypeError('Missing Game ID');
+        if (!id) throw new TypeError('Team ID is missing');
         return get(id, this._token, config.endpoints.get_team_by_team_id);
     }
 
@@ -81,7 +73,7 @@ class EliteAPI {
      * @param {String} id Find team information by user id
      */
     async getTeamByUserId (id = this.id) {
-        if (!id) throw new TypeError('Missing User ID');
+        if (!id) throw new TypeError('User ID is missing');
         return get (id, this._token, config.endpoints.get_team_by_user_id);
     }
 }
