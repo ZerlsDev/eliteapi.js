@@ -17,7 +17,7 @@ To install **eliteapi.js**, run the following command into your terminal from yo
 const EliteCreative = require('eliteapi.js');
 const elite = new EliteCreative('d6c5141c53403f4ad6ef93c2db89591676b13c4a'); // Generate your API key at https://elitescrims.xyz/developer
 
-elite.getUserStats('some user id').then((result => console.log(resullt)));
+elite.getUserStats('some user id').then((result => console.log(result)));
 ```
 
 # Methods
